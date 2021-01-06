@@ -10,30 +10,36 @@ public class SingletonPattern {
         EagerInitializedSingleton.getInstance();
 
         /*02. Static Block Initialization*/
+        StaticBlockSingleton.getInstance();
+
+        /*03. Lazy Initialization*/
+        LazyInitialization.getInstance();
     }
 }
+
 /*
-* 01. Eager Initialization
-* - Creats a obj at time of class loading means obj gets created even though not used.
-* - Don't provide exception handling.
-* - Should be used when we don't need any other resources in singleton class.
-* */
+ * 01. Eager Initialization
+ * - Creats a obj at time of class loading means obj gets created even though not used.
+ * - Don't provide exception handling.
+ * - Should be used when we don't need any other resources in singleton class.
+ * */
 class EagerInitializedSingleton {
 
     private static final EagerInitializedSingleton instance = new EagerInitializedSingleton();
 
     //private constructor to avoid client applications to use constructor
-    private EagerInitializedSingleton(){}
+    private EagerInitializedSingleton() {
+    }
 
-    public static EagerInitializedSingleton getInstance(){
+    public static EagerInitializedSingleton getInstance() {
         return instance;
     }
 }
 
 /*
-* 02. Static Block Initialization
-* - similar to eager initialization, just provides an exceptional handling
-* */
+ * 02. Static Block Initialization
+ * - similar to eager initialization, just provides an exceptional handling
+ * */
 class StaticBlockSingleton {
     private static StaticBlockSingleton instance;
 
@@ -44,8 +50,20 @@ class StaticBlockSingleton {
 //            handle e
         }
     }
-    public static StaticBlockSingleton getInstance(){
+
+    public static StaticBlockSingleton getInstance() {
         return instance;
     }
 
+}
+
+class LazyInitialization {
+    private static LazyInitialization instance;
+
+    public static LazyInitialization getInstance() {
+        if (instance == null) {
+            instance = new LazyInitialization();
+        }
+        return instance;
+    }
 }
