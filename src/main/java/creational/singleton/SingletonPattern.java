@@ -1,11 +1,17 @@
+/*
+ * Creational design patterns provide solution to instantiate a object in the best possible way for specific situations.
+ */
+
 package creational.singleton;
-// Creational design patterns provide solution to instantiate a object in the best possible way for specific situations.
 
 import java.io.*;
 
-// Singleton pattern restricts the instantiation of a class and ensures that only one instance of the class exists in the Java virtual machine.
-// It seems to be a very simple design pattern but when it comes to implementation, it comes with a lot of implementation concerns.
-// The implementation of the Singleton pattern has always been a controversial topic among developers
+/*
+ * Singleton Pattern restricts the instantiation of a class and ensures that only one instance of the class exists in the Java virtual machine.
+ * It seems to be a very simple design pattern but when it comes to implementation, it comes with a lot of implementation concerns.
+ * The implementation of the Singleton pattern has always been a controversial topic among developers
+ */
+
 public class SingletonPattern {
     public static void main(String[] args) throws FileNotFoundException, IOException, ClassNotFoundException {
         /*01. Eager Initialization Approach*/
@@ -46,7 +52,7 @@ public class SingletonPattern {
 
 /*
  * 01. Eager Initialization
- * - Creats a obj at time of class loading means obj gets created even though not used.
+ * - Creates a obj at time of class loading means obj gets created even though not used.
  * - Don't provide exception handling.
  * - Should be used when we don't need any other resources in singleton class.
  * */
@@ -90,7 +96,7 @@ class StaticBlockSingleton {
 
 /*
  * 03. Lazy Initialization
- * - creats obj when getInstance() called
+ * - Creates obj when getInstance() called
  * - This is not thread safe as of now
  * */
 class LazyInitialization {
@@ -171,9 +177,11 @@ class BillPughSingleton {
     }
 }
 
-// Remember Java Reflection can break the singleton by making the constructors accessible via reflection APIs
-// To overcome this situation Enum can be used to make a singleton class which is unbreakable by reflection.
-// But Enum way doesn't allow LAZY initialization as ENUM executes once at the time of inz
+/*
+ * Remember Java Reflection can break the singleton by making the constructors accessible via reflection APIs
+ * To overcome this situation Enum can be used to make a singleton class which is unbreakable by reflection.
+ * But Enum way doesn't allow LAZY initialization as ENUM executes once at the time of inz
+ */
 
 /*
  * 06. SerializedSingleton
