@@ -1,5 +1,13 @@
+/*
+ * Creational design patterns provide solution to instantiate a object in the best possible way for specific situations.
+ */
+
 package creational.builder;
 
+/*
+* Builder pattern solves the issue with a large number of optional parameters and inconsistent state by providing a way to build the object step-by-step
+* and provide a method that will actually return the final Object
+* */
 public class BuilderPattern {
     public static void main(String[] args) {
         Machine m = new Machine.MachineBuilder("8GB", "1TB").setGPU("4GB NVDIA").setBluetooth(true).build();
