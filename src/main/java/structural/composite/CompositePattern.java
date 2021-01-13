@@ -6,7 +6,8 @@
 package structural.composite;
 
 /*
- * Real life example – A diagram is a structure that consists of Objects such as Circle, Lines, Triangle etc.
+ *
+ *  Real life example – A diagram is a structure that consists of Objects such as Circle, Lines, Triangle etc.
  * When we fill the drawing with color (say Red), the same color also gets applied to the Objects in the drawing
  * Composite Pattern consists of following objects.
  *
@@ -65,7 +66,7 @@ class Circle implements Shape {
     }
 }
 
-// Composite
+// Composite -
 class Drawing implements Shape {
 
     //collection of Shapes
