@@ -142,6 +142,7 @@ class Oval implements Shape {
     }
 }
 
+// FlyWeight Factory
 class FlyweightShapeFactory {
 
     private static final HashMap<ShapeType, Shape> shapes = new HashMap<>();
