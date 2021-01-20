@@ -14,7 +14,7 @@ package structural.bridge;
  *
  * The implementation of bridge design pattern follows the notion to prefer Composition over inheritance.
  *
- * a interface -> Color
+ * a interface -> Color. This is implemented by Classes of all the colors we have.
  * a abstract Class -> Shape
  *      - this has Composition of a color as constructor parameter
  * Usage ->
