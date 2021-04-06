@@ -15,10 +15,10 @@ package creational.factory;
 public class FactoryPattern {
     public static void main(String[] args) {
         Machine machine = MachineFactory.getMachine("pc", "8 GB", "1 TB", "3.2 GHz");
-        System.out.println(machine.toString());
+        System.out.println(machine);
 
         Machine machine2 = MachineFactory.getMachine("server", "32 GB", "500 GB", "4.2 GHz");
-        System.out.println(machine2.toString());
+        System.out.println(machine2);
 
     }
 }

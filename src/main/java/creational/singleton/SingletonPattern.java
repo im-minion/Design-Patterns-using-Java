@@ -163,7 +163,7 @@ class ThreadSafeSingleton2 {
  * SingletonHelper class is not loaded into memory and only when someone calls the getInstance method,
  * this class gets loaded and creates the Singleton class instance
  * */
-class BillPughSingleton {
+class BillPughSingleton { //static inner class named 'SingletonHelper'
     // private constructor to avoid creation of object
     private BillPughSingleton() {
     }

@@ -21,9 +21,9 @@ public class AdapterPattern {
 
 
         SocketAdapter sockAdapter2 = new SocketClassAdapterImpl();
-        Volt v3_2 = getVolt(sockAdapter, 3);
-        Volt v12_2 = getVolt(sockAdapter, 12);
-        Volt v120_2 = getVolt(sockAdapter, 120);
+        Volt v3_2 = getVolt(sockAdapter2, 3);
+        Volt v12_2 = getVolt(sockAdapter2, 12);
+        Volt v120_2 = getVolt(sockAdapter2, 120);
         System.out.println("v3 volts using Class Adapter=" + v3_2.getVolts());
         System.out.println("v12 volts using Class Adapter=" + v12_2.getVolts());
         System.out.println("v120 volts using Class Adapter=" + v120_2.getVolts());

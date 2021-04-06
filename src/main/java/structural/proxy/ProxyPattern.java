@@ -8,7 +8,7 @@ package structural.proxy;
 import java.io.IOException;
 
 /*
- * Proxy pattern intent is to “Provide a surrogate or placeholder for another object to control access to it”.
+ * Proxy pattern intent is to “Provide a surrogate or placeholder for another object to control access to it
  * Proxy pattern is used when we want to provide controlled access of a functionality.
  * */
 public class ProxyPattern {
