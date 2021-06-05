@@ -19,7 +19,7 @@ The following 5 concepts make up our SOLID principles:
 
 1. Single Responsibility - a class should only have one responsibility. (think about aspects like Testing, LowerCoupling, Organization)
 2. Open/Closed           - classes should be open for extension, but closed for modification.
-3. Liskov Substitution   - if class A is a subtype of class B, then we should be able to replace B with A without disrupting the behavior of our program.
+3. Liskov Substitution   - if class A(child) is a subtype of class B(parent), then we should be able to replace B(prent) with A(child) without disrupting the behavior of our program.
 4. Interface Segregation - larger interfaces should be split into smaller ones. So, we can ensure that implementing classes only need to be concerned about the methods that are of interest to them.
 5. Dependency Inversion  - The principle of Dependency Inversion refers to the decoupling of software modules.
                            This way, instead of high-level modules depending on low-level modules, both will depend on abstractions

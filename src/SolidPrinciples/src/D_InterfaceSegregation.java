@@ -31,3 +31,19 @@ interface BearPetter {
 
 /* Now the one who cares for the bear will implement 'BearCleaner' and 'BearFeeder'
  * And the one who owns/pet them will implement 'BearPetter'*/
+
+class Human implements BearPetter {
+
+}
+
+class Guy implements BearFeeder, BearCleaner {
+
+}
+
+class OtherGuy implements BearCleaner, BearFeeder, BearPetter {
+}
+
+// with previous impl
+class OtherGuy2 implements BearKeeper {
+
+}

@@ -7,7 +7,7 @@ package creational.singleton;
 import java.io.*;
 
 /*
- * Singleton Pattern restricts the instantiation of a class and ensures that only one instance of the class exists in the Java virtual machine.
+ * Singleton Pattern restricts the instantiation of a class and ensures that only one instance of the class exists in the Java virtual machine (Classloader).
  * It seems to be a very simple design pattern but when it comes to implementation, it comes with a lot of implementation concerns.
  * The implementation of the Singleton pattern has always been a controversial topic among developers
  */
@@ -134,7 +134,7 @@ class ThreadSafeSingleton {
     }
 }
 
-//Above works well but has a performance issue due to method level synchronization
+//Above  works well but has a performance issue due to method level synchronization
 // below approach is 2nd way with synchronized block.
 class ThreadSafeSingleton2 {
     private static ThreadSafeSingleton2 instance;

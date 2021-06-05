@@ -30,7 +30,7 @@ class Windows98Machine {
     }
 }
 
-/*Now instead of coupling them tightly other approach is we cna introduce and Interface Keyboard and Monitor, so that not only StandardKeyboard but other Keyboards can also be used with your new machine
+/*Now instead of coupling them tightly other approach is we can introduce and Interface Keyboard and Monitor, so that not only StandardKeyboard but other Keyboards can also be used with your new machine
  * and Same goes with Monitor*/
 interface Keyboard {
 
@@ -48,6 +48,10 @@ class StandardMonitor2 implements Monitor {
 
 }
 
+class FunkyKeyborad implements Keyboard {
+
+}
+
 class Windows98Machine2 {
 
     private final Keyboard keyboard;
@@ -56,5 +60,6 @@ class Windows98Machine2 {
     public Windows98Machine2() {
         monitor = new StandardMonitor2();
         keyboard = new StandardKeyboard2();
+        // keyboard = new FunkyKeyborad // this can work too
     }
 }

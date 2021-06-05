@@ -1,6 +1,6 @@
 package creational.factory;
 
-public abstract class Machine {
+public abstract class Machine { // parent class
     public abstract String getRam();
 
     public abstract String getHDD();
