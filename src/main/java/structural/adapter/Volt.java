@@ -31,7 +31,7 @@ interface SocketAdapter {
     Volt get3Volt();
 }
 
-class SocketClassAdapterImpl extends Socket implements SocketAdapter{
+class SocketClassAdapterImpl extends Socket implements SocketAdapter {
 
     @Override
     public Volt get120Volt() {
@@ -40,23 +40,23 @@ class SocketClassAdapterImpl extends Socket implements SocketAdapter{
 
     @Override
     public Volt get12Volt() {
-        Volt v= getVolt();
-        return convertVolt(v,10);
+        Volt v = getVolt();
+        return convertVolt(v, 10);
     }
 
     @Override
     public Volt get3Volt() {
-        Volt v= getVolt();
-        return convertVolt(v,40);
+        Volt v = getVolt();
+        return convertVolt(v, 40);
     }
 
     private Volt convertVolt(Volt v, int i) {
-        return new Volt(v.getVolts()/i);
+        return new Volt(v.getVolts() / i);
     }
 
 }
 
-class SocketObjectAdapterImpl implements SocketAdapter{
+class SocketObjectAdapterImpl implements SocketAdapter {
 
     //Using Composition for adapter pattern
     private final Socket sock = new Socket();
@@ -68,17 +68,17 @@ class SocketObjectAdapterImpl implements SocketAdapter{
 
     @Override
     public Volt get12Volt() {
-        Volt v= sock.getVolt();
-        return convertVolt(v,10);
+        Volt v = sock.getVolt();
+        return convertVolt(v, 10);
     }
 
     @Override
     public Volt get3Volt() {
-        Volt v= sock.getVolt();
-        return convertVolt(v,40);
+        Volt v = sock.getVolt();
+        return convertVolt(v, 40);
     }
 
     private Volt convertVolt(Volt v, int i) {
-        return new Volt(v.getVolts()/i);
+        return new Volt(v.getVolts() / i);
     }
 }

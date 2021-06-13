@@ -15,7 +15,7 @@ import java.sql.Connection;
  * But when the complexity increases or the interface behavior names are confusing,
  * the client application will find it difficult to manage it.
  * So we can apply Facade pattern here and
- * provide a wrapper interface on top of the existing interface to help client application
+ * provide a wrapper interface on top of the existing interfaces to help client application.
  * */
 public class FacadePattern {
     public static void main(String[] args) {

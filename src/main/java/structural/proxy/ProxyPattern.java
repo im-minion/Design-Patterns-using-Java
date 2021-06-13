@@ -42,6 +42,8 @@ class CommandExecutorImpl implements CommandExecutor {
 // client class where only privilaged user can run a command
 class CommandExecutorProxyImpl implements CommandExecutor {
     private boolean isAdmin;
+
+    // composition of actual class
     private final CommandExecutor executor;
 
     public CommandExecutorProxyImpl(String user, String pwd) {

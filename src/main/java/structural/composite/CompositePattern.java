@@ -7,9 +7,11 @@ package structural.composite;
 
 /*
  *
- *  Real life example – A diagram is a structure that consists of Objects such as Circle, Lines, Triangle etc.
- * When we fill the drawing with color (say Red), the same color also gets applied to the Objects in the drawing
+ * Real life example – A diagram is a structure that consists of Objects such as Circle, Lines, Triangle etc.
+ * When we fill the drawing with color (say Red), the same color also gets applied to the Objects in the drawing.
  * Composite Pattern consists of following objects.
+ *
+ * Composite Pattern lets clients treat individual objects and compositions of objects uniformly
  *
  * Base Component – Base component is the interface for all objects in the composition,
  *                  client program uses base component to work with the objects in the composition.

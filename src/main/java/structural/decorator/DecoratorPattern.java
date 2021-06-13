@@ -24,7 +24,7 @@ public class DecoratorPattern {
     }
 }
 
-// interface or abstract class defining the methods
+// component - interface or abstract class defining the methods
 interface Car {
     void assemble();
 }
@@ -55,7 +55,7 @@ class CarDecorator implements Car {
 }
 
 // Extending the base decorator functionality and modifying the component behavior accordingly
-class SportsCar extends CarDecorator {
+class SportsCar extends CarDecorator { // and obviously impl Car from base class
     public SportsCar(Car c) {
         super(c);
     }
