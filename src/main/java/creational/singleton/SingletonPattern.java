@@ -190,6 +190,7 @@ class BillPughSingleton { //static inner class named 'SingletonHelper'
  * */
 
 class SerializedSingleton implements Serializable {
+    @Serial
     private static final long serialVersionUID = -7604766932017737115L;
 
     // private constructor to avoid creation of object
@@ -205,6 +206,7 @@ class SerializedSingleton implements Serializable {
     }
 
     // Adding this method makes Singleton class's Serialization and Deserialization correct.
+    @Serial
     protected Object readResolve() {
         return getInstance();
     }

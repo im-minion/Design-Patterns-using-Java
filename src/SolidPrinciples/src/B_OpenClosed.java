@@ -22,7 +22,7 @@ class Guitar {
 }
 
 /*
-we decide the Guitar is a little bit boring and could do with an awesome flame pattern to make it look a bit more ‘rock and roll'.
+we decide the Guitar is a little bit boring and could do with an awesome flame pattern to make it look a bit more 'rock and roll'.
 So instead of modifying the existing Guitar class create new class, because who know what errors can it cause.
 This solution stick to the open-closed principle and simply extend our Guitar class:
  */

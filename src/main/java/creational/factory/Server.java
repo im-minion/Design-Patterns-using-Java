@@ -2,9 +2,9 @@ package creational.factory;
 
 public class Server extends Machine {
 
-    private String ram;
-    private String hdd;
-    private String cpu;
+    private final String ram;
+    private final String hdd;
+    private final String cpu;
 
     public Server(String ram, String hdd, String cpu) {
         this.ram = ram;

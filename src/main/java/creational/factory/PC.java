@@ -1,9 +1,9 @@
 package creational.factory;
 
 public class PC extends Machine {
-    private String ram;
-    private String hdd;
-    private String cpu;
+    private final String ram;
+    private final String hdd;
+    private final String cpu;
 
     public PC(String ram, String hdd, String cpu) {
         this.ram = ram;

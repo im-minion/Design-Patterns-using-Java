@@ -34,16 +34,57 @@ interface BearPetter {
 
 class Human implements BearPetter {
 
+    @Override
+    public void petTheBear() {
+
+    }
 }
 
 class Guy implements BearFeeder, BearCleaner {
 
+    @Override
+    public void washTheBear() {
+
+    }
+
+    @Override
+    public void feedTheBear() {
+
+    }
 }
 
 class OtherGuy implements BearCleaner, BearFeeder, BearPetter {
+    @Override
+    public void washTheBear() {
+
+    }
+
+    @Override
+    public void feedTheBear() {
+
+    }
+
+    @Override
+    public void petTheBear() {
+
+    }
 }
 
 // with previous impl
 class OtherGuy2 implements BearKeeper {
 
+    @Override
+    public void washTheBear() {
+
+    }
+
+    @Override
+    public void feedTheBear() {
+
+    }
+
+    @Override
+    public void petTheBear() {
+
+    }
 }

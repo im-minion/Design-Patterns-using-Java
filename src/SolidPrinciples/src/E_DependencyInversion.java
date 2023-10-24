@@ -48,7 +48,7 @@ class StandardMonitor2 implements Monitor {
 
 }
 
-class FunkyKeyborad implements Keyboard {
+class FunkyKeyboard implements Keyboard {
 
 }
 
