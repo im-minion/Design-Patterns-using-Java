@@ -28,6 +28,14 @@ class Machine {
     private Machine() {
     }
 
+    // actual class constructor that takes the Builder object
+    private Machine(final MachineBuilder machineBuilder) {
+        this.HDD = machineBuilder.HDD;
+        this.RAM = machineBuilder.RAM;
+        this.GPU = machineBuilder.GPU;
+        this.isBluetoothEnabled = machineBuilder.isBluetoothEnabled;
+    }
+
     public String getRAM() {
         return RAM;
     }
@@ -44,36 +52,18 @@ class Machine {
         return isBluetoothEnabled;
     }
 
-    @Override
-    public String toString() {
-        return "Machine{" +
-                "RAM='" + RAM + '\'' +
-                ", HDD='" + HDD + '\'' +
-                ", GPU='" + GPU + '\'' +
-                ", isBluetoothEnabled=" + isBluetoothEnabled +
-                '}';
-    }
-
-    // actual class constructor that takes the Builder object
-    private Machine(MachineBuilder machineBuilder) {
-        this.HDD = machineBuilder.HDD;
-        this.RAM = machineBuilder.RAM;
-        this.GPU = machineBuilder.GPU;
-        this.isBluetoothEnabled = machineBuilder.isBluetoothEnabled;
-    }
-
     //Public Static Builder Class
     public static class MachineBuilder {
         // Required Parameters
-        private String RAM;
-        private String HDD;
+        private final String RAM;
+        private final String HDD;
 
         // Optional Parameter
         private String GPU;
         private boolean isBluetoothEnabled;
 
         // constructor for Required Parameters
-        public MachineBuilder(String RAM, String HDD) {
+        public MachineBuilder(final String RAM, final String HDD) {
             this.HDD = HDD;
             this.RAM = RAM;
         }
@@ -90,8 +80,18 @@ class Machine {
         }
 
         // build method which returns actual Object
-        public Machine build() {
+        protected Machine build() {
             return new Machine(this);
         }
+    }
+
+    @Override
+    public String toString() {
+        return "Machine{" +
+                "RAM='" + RAM + '\'' +
+                ", HDD='" + HDD + '\'' +
+                ", GPU='" + GPU + '\'' +
+                ", isBluetoothEnabled=" + isBluetoothEnabled +
+                '}';
     }
 }
