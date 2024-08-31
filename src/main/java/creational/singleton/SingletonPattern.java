@@ -108,7 +108,11 @@ class LazyInitialization {
 
     public static LazyInitialization getInstance() {
         if (instance == null) {
-            instance = new LazyInitialization();
+            try {
+                instance = new LazyInitialization();
+            } catch (Exception e) {
+                // handle
+            }
         }
         return instance;
     }
@@ -128,7 +132,11 @@ class ThreadSafeSingleton {
     // making getInstance() method synchronised
     public static synchronized ThreadSafeSingleton getInstance() {
         if (instance == null) {
-            instance = new ThreadSafeSingleton();
+            try {
+                instance = new ThreadSafeSingleton();
+            } catch (Exception e) {
+                // handle
+            }
         }
         return instance;
     }
@@ -148,7 +156,11 @@ class ThreadSafeSingleton2 {
         if (instance == null) {
             synchronized (ThreadSafeSingleton2.class) {
                 if (instance == null) {
-                    instance = new ThreadSafeSingleton2();
+                    try {
+                        instance = new ThreadSafeSingleton2();
+                    } catch (Exception e) {
+                        // handle
+                    }
                 }
             }
         }
